@@ -44,6 +44,15 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "test": [
+            "./vendor/bin/phpunit tests"
+        ],
+        "upload": [
+            "@test",
+            "git add .",
+            "giit commit -m \"nova verzija\"",
+            "git push heroku master"
         ]
     },
     "extra": {
